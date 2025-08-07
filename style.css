@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  font-family: Noto Serif SC;
+}
+header {
+ background-color:rgba(237, 82, 31, 0.8);
+ height:80px;
+ width:100%;
+ position: fixed;
+}
+
+header a{
+color:white;
+text-decoration:none;
+}
+
+header a:hover{
+text-decoration:underline;
+}
+
+header ul{
+position:absolute;
+right:5vw;
+top:0;
+line-height:80px;
+}
+
+header li{
+display:inline;
+margin-right:4vw;
+}
+
+h1{
+color:white;
+position:absolute;
+left:120px;
+top:0;
+line-height:80px;
+}
+
+.qianyanp1{
+background-color:aliceblue;
+color:white;
+height:95vh;
+background-image:url("image-weichuli/我和kiki.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.qianyanp1 h2{
+font-size:80px;
+margin-top:60px;
+}
+
+.qianyanp1 blockquote{
+color:#FEF7E6;
+font-size:30px;
+margin:25px 0;
+}
+
+.qianyanp1 a{
+color:white;
+text-decoration:none;
+border:1px solid #ACACAC;
+padding:10px 20px;
+border-radius:5px;
+}
+
+
+
+.qianyanp1::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* 可调透明度 */
+  z-index: -1;  /* 这句是关键 */
+}
+.qianyanp1 > * {
+  position: relative;
+  z-index: 1;
+}
+.qianyanp1 {
+  position: relative; /* 必须添加，才能定位 ::before */
+}
+
+.jieshaop2{
+display:flex;
+}
+
+.jieshaop2 img{
+width:50%;
+}
+
+.info1{
+width:50%;
+background-color:#c65b78;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.info1 h2{
+font-size:40px;
+margin-bottom:30px;
+color: #f4f3f3;
+}
+
+.info1 p{
+text-align:center;
+line-height:2em;
+font-size:20px;
+color: #f4f3f3;
+}
+
+
+
+
+.jieshaop3{
+display:flex;
+}
+
+.jieshaop3 img{
+width:50%;
+}
+
+.info2{
+width:50%;
+background-color:#9ac9e9;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.info2 h2{
+font-size:40px;
+margin-bottom:30px;
+}
+
+.info2 p{
+text-align:center;
+line-height:2em;
+font-size:20px;
+}
+
+
+
+
+.zhanshi{
+display:flex;
+flex-wrap: wrap; /* 允许换行 */
+background-color:#a6b3a5;
+justify-content:space-between;
+align-items: flex-start; /* 如果你希望顶部对齐可以设为 flex-start */
+align-items:center;
+gap: 40px 20px; /* 可选：行列间距更清晰 */
+padding:100px 180px 80px;
+}
+
+.zhanshi div{
+width: calc(33.333% - 20px); /* 每行3个，减去gap的一部分 */
+text-align:center;
+box-sizing: border-box;
+}
+
+.zhanshi img{
+width:100%;
+border-radius:10px;
+}
+
+.zhanshi h3{
+font-size:20px;
+margin:20px 0;
+}
+
+.zhanshi p{
+font-size:14px;
+line-height:1.6em;
+}
+
+@media (max-width: 900px) {
+  .zhanshi div {
+    width: calc(50% - 20px); /* 每行2个 */
+  }
+}
+
+@media (max-width: 600px) {
+  .zhanshi div {
+    width: 100%; /* 每行1个 */
+  }
+}
+
+
+.zhufuyu {
+  position: relative; /* 必须有 */
+  background: #c65b78;
+  background-image:url("image-weichuli/欢乐街女王镜.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  color: #f4f3f3;
+  display: flex;
+  justify-content: center;   /* 水平居中 */
+  align-items: center;       /* 垂直居中 */
+  font-size: 20px;
+  line-height: 1.8em;
+  padding: 20px;             /* 留出内边距更美观 */
+  text-align: center;        /* 多行文字也居中 */
+}
+
+/* 添加的蒙版 */
+.zhufuyu::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明黑色蒙版 */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 文字内容浮在蒙版之上 */
+.zhufuyu > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+.newsletter{
+background-color:#31967a;
+color:white;
+padding:60px 0;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.newsletter p{
+margin-bottom:20px;
+}
+
+.newsletter input, .newsletter button{
+background-color:transparent;
+color:white;
+border:1px solid #949d9a;
+padding:10px;
+border-radius:5px;
+}
+
+.newsletter input{
+width:200px;
+margin-right:15px;
+}
+
+.newsletter button{
+width:80px;
+cursor:pointer;
+}
+
+input::placeholder{
+color:#c2adad;
+}
+
+input:focus{
+outline:none;
+border-color:#b7ce27;
+}
+
+
+
+footer {
+  background-color: #ebd61b;
+  color: rgb(4, 3, 3);
+  height: 60px;
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  font-size: 14px;
+}
+
+
