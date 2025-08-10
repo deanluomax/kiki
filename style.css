@@ -293,3 +293,96 @@ footer {
 }
 
 
+
+
+
+
+/* 保持box-sizing一致，方便布局 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* header响应式 */
+@media (max-width: 768px) {
+  header ul {
+    right: 2vw;
+    line-height: normal;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  header li {
+    margin-right: 2vw;
+  }
+  h1 {
+    left: 20px;
+    font-size: 1.2rem;
+    line-height: normal;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* qianyanp1内大标题和文字缩小 */
+@media (max-width: 768px) {
+  .qianyanp1 h2 {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  .qianyanp1 blockquote {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+}
+
+/* jieshaop2 和 jieshaop3 垂直堆叠，图片和文本宽度100% */
+@media (max-width: 768px) {
+  .jieshaop2, .jieshaop3 {
+    flex-direction: column;
+  }
+  .jieshaop2 img, .jieshaop3 img,
+  .info1, .info2 {
+    width: 100% !important; /* 强制100%宽度 */
+  }
+}
+
+/* zhanshi 里的卡片宽度自适应 */
+@media (max-width: 900px) {
+  .zhanshi div {
+    width: calc(50% - 20px); /* 每行2个 */
+  }
+}
+
+@media (max-width: 600px) {
+  .zhanshi div {
+    width: 100%; /* 每行1个 */
+  }
+}
+
+/* newsletter表单响应式 */
+@media (max-width: 480px) {
+  .newsletter {
+    padding: 40px 10px;
+  }
+  .newsletter input {
+    width: 100% !important;
+    margin: 0 0 15px 0;
+  }
+  .newsletter button {
+    width: 100% !important;
+  }
+  .newsletter form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* 解决固定header遮挡内容问题，main上加内边距 */
+@media (max-width: 768px) {
+  main {
+    padding-top: 90px; /* 你header高度80px+缓冲 */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
